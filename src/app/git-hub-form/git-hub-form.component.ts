@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GitHub} from '../git-hub';
+// import { from } from 'rxjs';
 
 @Component({
   selector: 'app-git-hub-form',
@@ -7,7 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GitHubFormComponent implements OnInit {
 
-  constructor() { }
+  username:string;
+  
+  searchuser(username){
+    this.username = new username ('','','','',0,0,0,'','',new Date);
+  }
+
+  // constructor(private github:GitHub) {
+
+  //  }
 
   ngOnInit() {
   }

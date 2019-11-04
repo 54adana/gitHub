@@ -8,6 +8,7 @@ import { GitHubFormComponent } from './git-hub-form/git-hub-form.component';
 import { GitHubComponent } from './git-hub/git-hub.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AboutComponent } from './about/about.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { AboutComponent } from './about/about.component';
     GitHubFormComponent,
     GitHubComponent,
     NavbarComponent,
-    AboutComponent
+    AboutComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
