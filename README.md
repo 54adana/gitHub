@@ -1,3 +1,13 @@
+# Project
+gitHub project
+
+# Author
+Yvette Adana
+
+# Set-up instructions
+gitHub link:url('https://github.com/54adana/gitHub')
+
+
 # GitHub
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.12.

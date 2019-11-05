@@ -11,7 +11,7 @@ private clientid = "d4db20ae57a9e8f462da";
 private clientsecret = "b3579b59810e8febbc0248bfa93303730e88b822";
   constructor(private http:HttpClient) {
     console.log("Service is now ready!");
-    this.username = "wasongapaul5";
+    this.username = "54adana";
   }
   getProfileInfo(){
     return this.http.get("https://api.github.com/users/" + this.username + "?client_id="+ this.clientid + "&client_secret=" + this.clientsecret)
