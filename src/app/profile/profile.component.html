@@ -1,10 +1,10 @@
 <link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Pacifico|Yeon+Sung&display=swap" rel="stylesheet">
 <div class="container-fluid">
-<h1>GITHUB  PROFILE  SEARCH..</h1>
+<h1>GitSearch</h1>
 <form action="" class="search-form">
     <div class="form-group">
-    <input type="text" class="form-control" placeholder="enter username here...." [(ngModel)]="username" name="username" (keyup)="findProfile()">
+    <input type="text" class="form-control" placeholder="Username" [(ngModel)]="username" name="username" (keyup)="findProfile()">
     </div>
 </form>
  <div *ngIf="profile">
@@ -26,20 +26,26 @@
                 <div class="col-sm-6">
                         <div>
                             <p>
-                                <span class="label"> {{profile.followers}} Followers</span>
-                                <span class="label"> {{profile.following}} Following </span>
+                                
+                                
                                 <span class="label"> {{profile.public_gists}} gists</span>
+                                <br>
                                 <span class="label"> {{profile.public_repos}} Repositories</span>
+                                <br>
+                                <span class="label"> {{profile.followers}} Followers</span>
+                                <br>
+                                <span class="label"> {{profile.following}} Following </span>
+                                
                             </p>
                             <hr>
-                            <p><a href="{{profile.html_url}}" target="_blank" class=" view  btn btn-primary">View profile on github</a></p>
-                                <h1>Repositories</h1>
+                            <p><a href="{{profile.html_url}}" target="_blank" class=" view  btn btn-primary">View  on github</a></p>
+                                <h1>Repos</h1>
                                 <div class="row">
                                     <div class="col-sm-6">
                             <div class="card">
                                 <div class="card" *ngFor="let repo of repos">
                                     <div class="card-body">
-                                        <a href="{{repo.html_url}}" class="text-align-center" target="_blank" class="view btn btn-outline-success">View this project on github</a>
+                                        <a href="{{repo.html_url}}" class="text-align-center" target="_blank" class="view btn btn-outline-success">View on github</a>
                                         <br>
                                         <br>
                                         <div class=" text-center"><h3 id="rname">{{repo.name}}</h3></div>
