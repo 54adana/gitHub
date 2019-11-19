@@ -1,0 +1,54 @@
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
+
+
+<!-- Styles block -->
+
+{% block styles%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+{% endblock %}
+<!-- Content block -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        {% if title %}
+        <title> {{title}}</title>
+        {% else %}
+        <title>Welcome to The Best News Brodcasting  Website</title>
+        {% endif %}
+    </head>
+    <body>
+        <!-- Content block -->
+{% block content %}
+<div class="container">
+        <form>
+            <input type="text" name="news_query" placeholder="Search news" class="form-control">
+            <input type="search"  value="Search" class="btn btn-primary">
+        </form>
+    
+    </div>
+
+<!-- National News -->
+<h3> National News</h3>
+<ul>
+    {{ macro.displayNewsList(popular)}}
+</ul>
+<!-- Bussiness News  -->
+<h3> Bussiness News </h3>
+<ul>
+    {{ macro.displayNewsList(Bussiness News)}}
+</ul>
+<!-- Sports News -->
+<h3>Sports News</h3>
+<ul>
+    {{ macro.displayNewsList(Sports News)}}
+</ul>
+
+{% endblock%}
+
+
+
+    </body>
+</html>
